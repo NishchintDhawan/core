@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'maven'
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.7.1'
+    id 'checkstyle'
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+sourceCompatibility = 1.7
+
+group = 'org.opencadc'
+
+version = '1.0'
+
+checkstyle {
+    ignoreFailures = false
+    configFile = file("${projectDir}/src/main/resources/cadc_checkstyle.xml") 
+    toolVersion = '8.2'
+    sourceSets = [project.sourceSets.test]
+}
