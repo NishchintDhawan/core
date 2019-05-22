@@ -5,10 +5,12 @@ plugins {
     id 'com.jfrog.bintray' version '1.8.4'
 }
 
+
 repositories {
     jcenter()
     mavenLocal()
 }
+
 
 sourceCompatibility = 1.7
 
